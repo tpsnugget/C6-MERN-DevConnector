@@ -5,6 +5,10 @@ const app = express()
 
 connectDB()
 
+// Middleware
+// This is the old body-parser
+app.use(express.json({extended: false}))
+
 // Connect Database
 app.get("/", (req, res) => res.send("API Running"))
 
